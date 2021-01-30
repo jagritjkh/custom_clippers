@@ -43,4 +43,6 @@ ClipPath(
 ![custom_clipper1](https://user-images.githubusercontent.com/32562337/106357508-7bb36f80-632c-11eb-984b-e5f06e95458a.jpg)
 ![custom_clipper2](https://user-images.githubusercontent.com/32562337/106357509-7c4c0600-632c-11eb-853b-4300676a45bc.jpg)
 ![custom_clipper3](https://user-images.githubusercontent.com/32562337/106357510-7d7d3300-632c-11eb-8460-41fff634e4d1.jpg)
-![custom_clipper4](https://user-images.githubusercontent.com/32562337/106357511-7d7d3300-632c-11eb-9268-c544d3c804ad.jpg)
+![custom_clipper4](https://user-images.githubusercontent.com/32562337/106358663-9c32f800-6333-11eb-9c52-ac9254d94da4.jpg)
+![custom_clipper5](https://user-images.githubusercontent.com/32562337/106358666-9d642500-6333-11eb-9e05-d4ba065a905c.jpg)
+![custom_clipper6](https://user-images.githubusercontent.com/32562337/106358667-9dfcbb80-6333-11eb-8e14-9dd1af70b92a.jpg)
