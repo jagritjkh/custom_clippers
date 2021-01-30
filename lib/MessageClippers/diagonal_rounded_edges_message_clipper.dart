@@ -1,11 +1,11 @@
 import 'package:custom_clippers/enum/enums.dart';
 import 'package:flutter/material.dart';
 
-class ChatBubbleClipper extends CustomClipper<Path> {
+class DiagonalRoundedEdgesMessageClipper extends CustomClipper<Path> {
   final MessageType type;
   final double bubbleRadius;
 
-  ChatBubbleClipper(this.type, {this.bubbleRadius = 30});
+  DiagonalRoundedEdgesMessageClipper(this.type, {this.bubbleRadius = 30});
 
   @override
   Path getClip(Size size) {

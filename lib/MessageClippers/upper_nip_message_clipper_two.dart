@@ -8,8 +8,8 @@ class UpperNipMessageClipperTwo extends CustomClipper<Path> {
   final double nipWidth;
   final double nipRadius;
 
-  UpperNipMessageClipperTwo({
-    this.type = MessageType.SEND,
+  UpperNipMessageClipperTwo(
+    this.type, {
     this.bubbleRadius = 12,
     this.nipHeight = 12,
     this.nipWidth = 16,

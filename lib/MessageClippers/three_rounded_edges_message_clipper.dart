@@ -26,7 +26,7 @@ class ThreeRoundedEdgesMessageClipper extends CustomClipper<Path> {
           0, 0, size.width, size.height, Radius.circular(bubbleRadius)));
       var path2 = Path();
       path2.addRRect(RRect.fromLTRBAndCorners(0, 0, bubbleRadius, bubbleRadius,
-          topLeft: Radius.circular(fourthEdgeRadius)));
+          bottomLeft: Radius.circular(fourthEdgeRadius)));
       path.addPath(path2, Offset(0, 0));
     }
 

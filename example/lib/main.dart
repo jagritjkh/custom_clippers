@@ -1,9 +1,5 @@
-import 'package:custom_clippers/Clippers/directional_wave_clipper.dart';
-import 'package:custom_clippers/Clippers/multiple_points_clipper.dart';
-import 'package:custom_clippers/Clippers/sin_cosine_wave_clipper.dart';
 import 'package:custom_clippers/custom_clippers.dart';
 import 'package:flutter/material.dart';
-
 import 'container_to_clip.dart';
 
 void main() {
@@ -202,6 +198,116 @@ class _ClippersPageState extends State<ClippersPage> {
             child: ContainerToClip(
               Colors.green,
               'Sin Cosine Wave Clipper Top Right',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Three Rounded Edges Message Clipper Sender Side
+          ClipPath(
+            clipper: ThreeRoundedEdgesMessageClipper(MessageType.SEND),
+            child: ContainerToClip(
+              Colors.blue,
+              'Three Rounded Edges Message Clipper Sender',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Three Rounded Edges Message Clipper Receiver Side
+          ClipPath(
+            clipper: ThreeRoundedEdgesMessageClipper(MessageType.RECEIVE),
+            child: ContainerToClip(
+              Colors.yellow,
+              'Three Rounded Edges Message Clipper Receiver',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Diagonal Rounded Edges Message Clipper Sender Side
+          ClipPath(
+            clipper: DiagonalRoundedEdgesMessageClipper(MessageType.SEND),
+            child: ContainerToClip(
+              Colors.red,
+              'Diagonal Rounded Edges Message Clipper Sender',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Diagonal Rounded Edges Message Clipper Receiver Side
+          ClipPath(
+            clipper: DiagonalRoundedEdgesMessageClipper(MessageType.RECEIVE),
+            child: ContainerToClip(
+              Colors.green,
+              'Diagonal Rounded Edges Message Clipper Receiver',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Lower Nip Message Clipper Sender Side
+          ClipPath(
+            clipper: LowerNipMessageClipper(MessageType.SEND),
+            child: ContainerToClip(
+              Colors.blue,
+              'Lower Nip Message Clipper Sender',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Lower Nip Message Clipper Receiver Side
+          ClipPath(
+            clipper: LowerNipMessageClipper(MessageType.RECEIVE),
+            child: ContainerToClip(
+              Colors.yellow,
+              'Lower Nip Message Clipper Receiver',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Upper Nip Message Clipper Sender Side
+          ClipPath(
+            clipper: UpperNipMessageClipper(MessageType.SEND),
+            child: ContainerToClip(
+              Colors.red,
+              'Upper Nip Message Clipper Sender',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Upper Nip Message Clipper Receiver Side
+          ClipPath(
+            clipper: UpperNipMessageClipper(MessageType.RECEIVE),
+            child: ContainerToClip(
+              Colors.green,
+              'Upper Nip Message Clipper Receiver',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Upper Nip Message Clipper Two Sender Side
+          ClipPath(
+            clipper: UpperNipMessageClipperTwo(MessageType.SEND),
+            child: ContainerToClip(
+              Colors.blue,
+              'Upper Nip Message Clipper Two Sender',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          ///Upper Nip Message Clipper Two Receiver Side
+          ClipPath(
+            clipper: UpperNipMessageClipperTwo(MessageType.RECEIVE),
+            child: ContainerToClip(
+              Colors.yellow,
+              'Upper Nip Message Clipper Two Receiver',
             ),
           ),
 
