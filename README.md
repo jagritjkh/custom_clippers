@@ -11,7 +11,7 @@ To use this package, add `custom_clippers` as a [dependency in your pubspec.yaml
 ## Add dependency
 ```
 dependencies:
-  custom_clippers: ^0.0.2
+  custom_clippers: ^1.0.0
 ```
 
 ## Import

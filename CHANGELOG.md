@@ -1,4 +1,8 @@
-## [0.0.1] - 2021-01-30
+## [1.0.0] - 2021-03-17
+
+* migrate to null safety
+
+## [0.0.2] - 2021-01-30
 
 * added new custom clippers
 * added new message clippers
