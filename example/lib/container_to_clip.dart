@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ContainerToClip extends StatelessWidget {
+  ContainerToClip(this.color, this.text);
+
   final Color color;
   final String text;
-
-  ContainerToClip(this.color, this.text);
 
   @override
   Widget build(BuildContext context) {

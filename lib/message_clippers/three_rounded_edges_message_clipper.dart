@@ -1,5 +1,4 @@
-import 'package:custom_clippers/enum/enums.dart';
-import 'package:flutter/material.dart';
+part of 'package:custom_clippers/custom_clippers.dart';
 
 class ThreeRoundedEdgesMessageClipper extends CustomClipper<Path> {
   final MessageType type;
@@ -13,7 +12,7 @@ class ThreeRoundedEdgesMessageClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     var path = Path();
 
-    if (type == MessageType.SEND) {
+    if (type == MessageType.send) {
       path.addRRect(RRect.fromLTRBR(
           0, 0, size.width, size.height, Radius.circular(bubbleRadius)));
       var path2 = Path();
@@ -27,7 +26,7 @@ class ThreeRoundedEdgesMessageClipper extends CustomClipper<Path> {
       var path2 = Path();
       path2.addRRect(RRect.fromLTRBAndCorners(0, 0, bubbleRadius, bubbleRadius,
           bottomLeft: Radius.circular(fourthEdgeRadius)));
-      path.addPath(path2, Offset(0, 0));
+      path.addPath(path2, const Offset(0, 0));
     }
 
     path.close();
@@ -35,5 +34,5 @@ class ThreeRoundedEdgesMessageClipper extends CustomClipper<Path> {
   }
 
   @override
-  bool shouldReclip(CustomClipper old) => old != this;
+  bool shouldReclip(CustomClipper oldClipper) => oldClipper != this;
 }
