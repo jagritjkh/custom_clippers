@@ -40,12 +40,45 @@ class _ClippersPageState extends State<ClippersPage> {
         padding: EdgeInsets.all(20),
         physics: BouncingScrollPhysics(),
         children: [
+          /// Multiple Points Clipper top only with height of points as 50
+          ClipPath(
+            clipper: MultiplePointsClipper(Sides.top, heightOfPoint: 50),
+            child: ContainerToClip(
+              Colors.red,
+              'Multiple Points Clipper Top Only',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
           /// Multiple Points Clipper bottom only with height of points as 50
           ClipPath(
             clipper: MultiplePointsClipper(Sides.bottom, heightOfPoint: 50),
             child: ContainerToClip(
               Colors.red,
               'Multiple Points Clipper Bottom Only',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          /// Multiple Points Clipper left only with height of points as 50
+          ClipPath(
+            clipper: MultiplePointsClipper(Sides.left, heightOfPoint: 50, numberOfPoints: 7),
+            child: ContainerToClip(
+              Colors.red,
+              'Multiple Points Clipper Left Only',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          /// Multiple Points Clipper right only with height of points as 50
+          ClipPath(
+            clipper: MultiplePointsClipper(Sides.right, heightOfPoint: 50, numberOfPoints: 7),
+            child: ContainerToClip(
+              Colors.red,
+              'Multiple Points Clipper Right Only',
             ),
           ),
 
@@ -62,10 +95,31 @@ class _ClippersPageState extends State<ClippersPage> {
 
           SizedBox(height: 20),
 
+          /// Multiple Points Clipper horizontal with number of points as 50
+          ClipPath(
+            clipper: MultiplePointsClipper(Sides.horizontal, numberOfPoints: 20),
+            child: ContainerToClip(
+              Colors.green,
+              'Multiple Points Clipper Vertical',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          /// Multiple Rounded Points Clipper top only with number of points as 30
+          ClipPath(
+            clipper: MultipleRoundedPointsClipper(Sides.top, numberOfPoints: 30),
+            child: ContainerToClip(
+              Colors.blue,
+              'Multiple Points Rounded Clipper Top Only',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
           /// Multiple Rounded Points Clipper bottom only with number of points as 30
           ClipPath(
-            clipper:
-                MultipleRoundedPointsClipper(Sides.bottom, numberOfPoints: 30),
+            clipper: MultipleRoundedPointsClipper(Sides.bottom, numberOfPoints: 30),
             child: ContainerToClip(
               Colors.blue,
               'Multiple Points Rounded Clipper Bottom Only',
@@ -74,13 +128,45 @@ class _ClippersPageState extends State<ClippersPage> {
 
           SizedBox(height: 20),
 
+          /// Multiple Rounded Points Clipper left only with number of points as 30
+          ClipPath(
+            clipper: MultipleRoundedPointsClipper(Sides.left, numberOfPoints: 13),
+            child: ContainerToClip(
+              Colors.blue,
+              'Multiple Points Rounded Clipper Left Only',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          /// Multiple Rounded Points Clipper right only with number of points as 30
+          ClipPath(
+            clipper: MultipleRoundedPointsClipper(Sides.right, numberOfPoints: 13),
+            child: ContainerToClip(
+              Colors.blue,
+              'Multiple Points Rounded Clipper Right Only',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
           /// Multiple Rounded Points Clipper vertical with height of points as 50
           ClipPath(
-            clipper:
-                MultipleRoundedPointsClipper(Sides.vertical, heightOfPoint: 50),
+            clipper: MultipleRoundedPointsClipper(Sides.vertical, heightOfPoint: 50),
             child: ContainerToClip(
               Colors.yellow,
               'Multiple Rounded Points Clipper Vertical',
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          /// Multiple Rounded Points Clipper horizontal with height of points as 50
+          ClipPath(
+            clipper: MultipleRoundedPointsClipper(Sides.horizontal, heightOfPoint: 40, numberOfPoints: 7),
+            child: ContainerToClip(
+              Colors.yellow,
+              'Multiple Rounded Points Clipper Horizontal',
             ),
           ),
 
@@ -121,8 +207,7 @@ class _ClippersPageState extends State<ClippersPage> {
 
           /// Directional Wave Clipper with vertical position as VerticalPosition.TOP
           ClipPath(
-            clipper:
-                DirectionalWaveClipper(verticalPosition: VerticalPosition.top),
+            clipper: DirectionalWaveClipper(verticalPosition: VerticalPosition.top),
             child: ContainerToClip(
               Colors.yellow,
               'Directional Wave Clipper Top Left',
@@ -133,8 +218,7 @@ class _ClippersPageState extends State<ClippersPage> {
 
           /// Directional Wave Clipper with horizontal position as HorizontalPosition.RIGHT
           ClipPath(
-            clipper: DirectionalWaveClipper(
-                horizontalPosition: HorizontalPosition.right),
+            clipper: DirectionalWaveClipper(horizontalPosition: HorizontalPosition.right),
             child: ContainerToClip(
               Colors.red,
               'Directional Wave Clipper Bottom Right',
@@ -146,8 +230,7 @@ class _ClippersPageState extends State<ClippersPage> {
           /// Directional Wave Clipper with vertical position as VerticalPosition.TOP  and  horizontal position as HorizontalPosition.RIGHT
           ClipPath(
             clipper: DirectionalWaveClipper(
-                verticalPosition: VerticalPosition.top,
-                horizontalPosition: HorizontalPosition.right),
+                verticalPosition: VerticalPosition.top, horizontalPosition: HorizontalPosition.right),
             child: ContainerToClip(
               Colors.green,
               'Directional Wave Clipper Top Right',
@@ -169,8 +252,7 @@ class _ClippersPageState extends State<ClippersPage> {
 
           /// Sin Cosine Wave Clipper with vertical position as VerticalPosition.TOP
           ClipPath(
-            clipper:
-                SinCosineWaveClipper(verticalPosition: VerticalPosition.top),
+            clipper: SinCosineWaveClipper(verticalPosition: VerticalPosition.top),
             child: ContainerToClip(
               Colors.yellow,
               'Sin Cosine Wave Clipper Top Left',
@@ -181,8 +263,7 @@ class _ClippersPageState extends State<ClippersPage> {
 
           /// Sin Cosine Wave with horizontal position as HorizontalPosition.RIGHT
           ClipPath(
-            clipper: SinCosineWaveClipper(
-                horizontalPosition: HorizontalPosition.right),
+            clipper: SinCosineWaveClipper(horizontalPosition: HorizontalPosition.right),
             child: ContainerToClip(
               Colors.red,
               'Sin Cosine Wave Clipper Bottom Right',
@@ -194,8 +275,7 @@ class _ClippersPageState extends State<ClippersPage> {
           /// Sin Cosine Wave Clipper with vertical position as VerticalPosition.TOP  and  horizontal position as HorizontalPosition.RIGHT
           ClipPath(
             clipper: SinCosineWaveClipper(
-                verticalPosition: VerticalPosition.top,
-                horizontalPosition: HorizontalPosition.right),
+                verticalPosition: VerticalPosition.top, horizontalPosition: HorizontalPosition.right),
             child: ContainerToClip(
               Colors.green,
               'Sin Cosine Wave Clipper Top Right',
