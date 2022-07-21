@@ -23,35 +23,58 @@ class MultipleRoundedPointsClipper extends CustomClipper<Path> {
   final int numberOfPoints;
   final Sides side;
 
-  MultipleRoundedPointsClipper(this.side,
-      {this.heightOfPoint = 12, this.numberOfPoints = 16}); // final Sides side;
+  MultipleRoundedPointsClipper(this.side, {this.heightOfPoint = 12, this.numberOfPoints = 16}); // final Sides side;
 
   @override
   Path getClip(Size size) {
     Path path = Path();
-    path.lineTo(0.0, size.height);
-    double x = 0;
-    double y = size.height;
+    double x = 0.0;
+    double y = 0.0;
+    double xControlPoint = size.width - heightOfPoint;
     double yControlPoint = size.height - heightOfPoint;
-    double increment = size.width / numberOfPoints;
+    double incrementHeight = size.height / numberOfPoints;
+    double incrementWidth = size.width / numberOfPoints;
+
+    if (side == Sides.left || side == Sides.horizontal) {
+      while (y < size.height) {
+        path.quadraticBezierTo(heightOfPoint, y + incrementHeight / 2, x, y + incrementHeight);
+        y += incrementHeight;
+      }
+    }
+
+    x = 0.0;
+    y = size.height;
+    path.lineTo(x, y);
+
+    if (side == Sides.top || side == Sides.left || side == Sides.right || side == Sides.horizontal) {
+      path.lineTo(size.width, size.height);
+    }
 
     if (side == Sides.bottom || side == Sides.vertical) {
       while (x < size.width) {
-        path.quadraticBezierTo(
-            x + increment / 2, yControlPoint, x + increment, y);
-        x += increment;
+        path.quadraticBezierTo(x + incrementWidth / 2, yControlPoint, x + incrementWidth, y);
+        x += incrementWidth;
       }
     }
 
-    path.lineTo(size.width, 0.0);
+    x = size.width;
 
-    if (side == Sides.vertical) {
+    if (side == Sides.right || side == Sides.horizontal) {
+      while (y > 0) {
+        path.quadraticBezierTo(xControlPoint, y - incrementHeight / 2, x, y - incrementHeight);
+        y -= incrementHeight;
+      }
+    }
+
+    path.lineTo(x, 0.0);
+
+    if (side == Sides.top || side == Sides.vertical) {
       while (x > 0) {
-        path.quadraticBezierTo(
-            x - increment / 2, heightOfPoint, x - increment, 0);
-        x -= increment;
+        path.quadraticBezierTo(x - incrementWidth / 2, heightOfPoint, x - incrementWidth, 0);
+        x -= incrementWidth;
       }
     }
+
     path.close();
     return path;
   }

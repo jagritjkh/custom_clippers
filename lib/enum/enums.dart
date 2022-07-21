@@ -1,9 +1,13 @@
 part of 'package:custom_clippers/custom_clippers.dart';
 
 /// [Sides] is the enum which has two values and tells about the side.
+/// [Sides.top] is for the top side.
 /// [Sides.bottom] is for the bottom side.
+/// [Sides.right] is for the right side.
+/// [Sides.left] is for the left side.
 /// [Sides.vertical] is for the bottom and top sides.
-enum Sides { bottom, vertical }
+/// [Sides.horizontal] is for the right and left sides.
+enum Sides { top, bottom, right, left, vertical, horizontal }
 
 /// [MessageType] is the enum has two values and tells about the type of the
 /// message.

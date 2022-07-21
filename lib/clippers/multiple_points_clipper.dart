@@ -22,32 +22,58 @@ class MultiplePointsClipper extends CustomClipper<Path> {
   final int numberOfPoints;
   final Sides side;
 
-  MultiplePointsClipper(this.side,
-      {this.heightOfPoint = 12, this.numberOfPoints = 16});
+  MultiplePointsClipper(this.side, {this.heightOfPoint = 12, this.numberOfPoints = 16});
 
   @override
   Path getClip(Size size) {
     Path path = Path();
-    path.lineTo(0, size.height);
     double x = 0.0;
-    double y = size.height;
-    double increment = size.width / numberOfPoints / 2;
+    double y = 0.0;
+    double incrementHeight = size.height / numberOfPoints / 2;
+    double incrementWidth = size.width / numberOfPoints / 2;
+
+    if (side == Sides.left || side == Sides.horizontal) {
+      while (y < size.height) {
+        x = (x != heightOfPoint) ? heightOfPoint : 0;
+        y += incrementHeight;
+        path.lineTo(x, y);
+      }
+    }
+
+    path.lineTo(0, size.height);
+
+    if (side == Sides.top || side == Sides.left || side == Sides.right || side == Sides.horizontal) {
+      path.lineTo(size.width, size.height);
+    }
 
     if (side == Sides.bottom || side == Sides.vertical) {
+      x = 0.0;
+      y = size.height;
       while (x < size.width) {
-        x += increment;
+        x += incrementWidth;
         y = (y == size.height) ? size.height - heightOfPoint : size.height;
         path.lineTo(x, y);
       }
     }
+
+    if (side == Sides.right || side == Sides.horizontal) {
+      x = size.width;
+      y = size.height;
+      while (y > 0) {
+        y -= incrementHeight;
+        x = (x == size.width) ? size.width - heightOfPoint : size.width;
+        path.lineTo(x, y);
+      }
+    }
+
     path.lineTo(size.width, 0.0);
 
     x = size.width;
     y = 0.0;
-    if (side == Sides.vertical) {
+    if (side == Sides.top || side == Sides.vertical) {
       while (x > 0) {
-        x -= increment;
-        y = (y == 0) ? 0 + heightOfPoint : 0;
+        x -= incrementWidth;
+        y = (y == 0) ? heightOfPoint : 0;
         path.lineTo(x, y);
       }
     }
