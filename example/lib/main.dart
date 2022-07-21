@@ -100,7 +100,7 @@ class _ClippersPageState extends State<ClippersPage> {
             clipper: MultiplePointsClipper(Sides.horizontal, numberOfPoints: 20),
             child: ContainerToClip(
               Colors.green,
-              'Multiple Points Clipper Vertical',
+              'Multiple Points Clipper Horizontal',
             ),
           ),
 
