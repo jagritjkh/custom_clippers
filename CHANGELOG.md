@@ -1,4 +1,4 @@
-## [2.0.3] - 2025-05-11
+## [2.0.4] - 2025-05-11
 * Apply Dart auto format to improve code readability and formatting
 
 ## [2.0.3] - 2025-05-11
