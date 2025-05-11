@@ -1,3 +1,9 @@
+## [2.0.1] - 2025-05-11
+* update example's gradle version
+* update flutter version to 3.29.3
+* added custom clippers with more sides support
+* update packages' versions
+
 ## [2.0.0] - 2022-05-29
 * migrate to android V2 embedding
 * add documentation for all the clippers
