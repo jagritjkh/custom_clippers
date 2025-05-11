@@ -1,0 +1,2 @@
+/Users/jagritkharbanda/StudioProjects/self/custom_clippers/example/android/app/.cxx/Debug/5b325b5e/x86/CMakeFiles/edit_cache.dir
+/Users/jagritkharbanda/StudioProjects/self/custom_clippers/example/android/app/.cxx/Debug/5b325b5e/x86/CMakeFiles/rebuild_cache.dir
