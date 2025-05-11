@@ -69,10 +69,16 @@ class LowerNipMessageClipper extends CustomClipper<Path> {
       );
 
       path.lineTo(0, bubbleRadius);
-      path.arcToPoint(Offset(bubbleRadius, 0), radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(
+        Offset(bubbleRadius, 0),
+        radius: Radius.circular(bubbleRadius),
+      );
     } else {
       path.lineTo(size.width - bubbleRadius, 0);
-      path.arcToPoint(Offset(size.width, bubbleRadius), radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(
+        Offset(size.width, bubbleRadius),
+        radius: Radius.circular(bubbleRadius),
+      );
       path.lineTo(size.width, size.height - bubbleRadius - sizeOfNip);
       path.arcToPoint(
         Offset(size.width - bubbleRadius, size.height - sizeOfNip),
@@ -81,7 +87,12 @@ class LowerNipMessageClipper extends CustomClipper<Path> {
 
       path.lineTo(sizeRatio * sizeOfNip, size.height - sizeOfNip);
 
-      path.quadraticBezierTo(sizeOfNip, size.height - sizeOfNip, 0, size.height);
+      path.quadraticBezierTo(
+        sizeOfNip,
+        size.height - sizeOfNip,
+        0,
+        size.height,
+      );
       path.quadraticBezierTo(
         sizeOfNip,
         size.height - sizeOfNip,
@@ -90,7 +101,10 @@ class LowerNipMessageClipper extends CustomClipper<Path> {
       );
 
       path.lineTo(sizeOfNip, bubbleRadius);
-      path.arcToPoint(Offset(bubbleRadius + sizeOfNip, 0), radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(
+        Offset(bubbleRadius + sizeOfNip, 0),
+        radius: Radius.circular(bubbleRadius),
+      );
     }
 
     path.close();

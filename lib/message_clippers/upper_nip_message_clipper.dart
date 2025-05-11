@@ -57,11 +57,22 @@ class UpperNipMessageClipper extends CustomClipper<Path> {
         radius: Radius.circular(bubbleRadius),
       );
       path.lineTo(bubbleRadius, size.height);
-      path.arcToPoint(Offset(0, size.height - bubbleRadius), radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(
+        Offset(0, size.height - bubbleRadius),
+        radius: Radius.circular(bubbleRadius),
+      );
       path.lineTo(0, bubbleRadius + sizeOfNip);
-      path.arcToPoint(Offset(bubbleRadius, sizeOfNip), radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(
+        Offset(bubbleRadius, sizeOfNip),
+        radius: Radius.circular(bubbleRadius),
+      );
     } else {
-      path.quadraticBezierTo(sizeOfNip, sizeOfNip, sizeRatio * sizeOfNip, sizeOfNip);
+      path.quadraticBezierTo(
+        sizeOfNip,
+        sizeOfNip,
+        sizeRatio * sizeOfNip,
+        sizeOfNip,
+      );
       path.lineTo(size.width - bubbleRadius, sizeOfNip);
       path.arcToPoint(
         Offset(size.width, sizeOfNip + bubbleRadius),

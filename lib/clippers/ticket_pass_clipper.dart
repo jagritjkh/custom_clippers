@@ -30,7 +30,11 @@ class TicketPassClipper extends CustomClipper<Path> {
         Path()
           ..moveTo(0, 0)
           ..lineTo(position! - holeRadius, 0.0)
-          ..arcToPoint(Offset(position!, 0), clockwise: false, radius: const Radius.circular(1))
+          ..arcToPoint(
+            Offset(position!, 0),
+            clockwise: false,
+            radius: const Radius.circular(1),
+          )
           ..lineTo(size.width, 0.0)
           ..lineTo(size.width, size.height)
           ..lineTo(position!, size.height)

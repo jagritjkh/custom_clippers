@@ -41,7 +41,12 @@ class MultipleRoundedPointsClipper extends CustomClipper<Path> {
 
     if (side == Sides.left || side == Sides.horizontal) {
       while (y < size.height) {
-        path.quadraticBezierTo(heightOfPoint, y + incrementHeight / 2, x, y + incrementHeight);
+        path.quadraticBezierTo(
+          heightOfPoint,
+          y + incrementHeight / 2,
+          x,
+          y + incrementHeight,
+        );
         y += incrementHeight;
       }
     }
@@ -59,7 +64,12 @@ class MultipleRoundedPointsClipper extends CustomClipper<Path> {
 
     if (side == Sides.bottom || side == Sides.vertical) {
       while (x < size.width) {
-        path.quadraticBezierTo(x + incrementWidth / 2, yControlPoint, x + incrementWidth, y);
+        path.quadraticBezierTo(
+          x + incrementWidth / 2,
+          yControlPoint,
+          x + incrementWidth,
+          y,
+        );
         x += incrementWidth;
       }
     }
@@ -68,7 +78,12 @@ class MultipleRoundedPointsClipper extends CustomClipper<Path> {
 
     if (side == Sides.right || side == Sides.horizontal) {
       while (y > 0) {
-        path.quadraticBezierTo(xControlPoint, y - incrementHeight / 2, x, y - incrementHeight);
+        path.quadraticBezierTo(
+          xControlPoint,
+          y - incrementHeight / 2,
+          x,
+          y - incrementHeight,
+        );
         y -= incrementHeight;
       }
     }
@@ -77,7 +92,12 @@ class MultipleRoundedPointsClipper extends CustomClipper<Path> {
 
     if (side == Sides.top || side == Sides.vertical) {
       while (x > 0) {
-        path.quadraticBezierTo(x - incrementWidth / 2, heightOfPoint, x - incrementWidth, 0);
+        path.quadraticBezierTo(
+          x - incrementWidth / 2,
+          heightOfPoint,
+          x - incrementWidth,
+          0,
+        );
         x -= incrementWidth;
       }
     }

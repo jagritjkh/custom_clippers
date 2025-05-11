@@ -1,7 +1,7 @@
 name: custom_clippers
 description: custom_clippers is a package that contains multiple custom clippers and different types of message clippers which you can give to clipper property of ClipPath.
 
-version: 2.0.3
+version: 2.0.4
 #author: Jagrit Kharbanda<jagritjkh@gmail.com>
 homepage: https://github.com/jagritjkh/custom_clippers
 

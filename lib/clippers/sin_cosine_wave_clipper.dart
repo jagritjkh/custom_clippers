@@ -47,7 +47,10 @@ class SinCosineWaveClipper extends CustomClipper<Path> {
         firstEndPoint.dy,
       );
 
-      secondControlPoint = Offset(size.width - (size.width / 3.25), size.height - 65);
+      secondControlPoint = Offset(
+        size.width - (size.width / 3.25),
+        size.height - 65,
+      );
       secondEndPoint = Offset(size.width, size.height - 40);
       path.quadraticBezierTo(
         secondControlPoint.dx,

@@ -5,14 +5,26 @@ class ThreeRoundedEdgesMessageClipper extends CustomClipper<Path> {
   final double bubbleRadius;
   final double fourthEdgeRadius;
 
-  ThreeRoundedEdgesMessageClipper(this.type, {this.bubbleRadius = 30, this.fourthEdgeRadius = 2});
+  ThreeRoundedEdgesMessageClipper(
+    this.type, {
+    this.bubbleRadius = 30,
+    this.fourthEdgeRadius = 2,
+  });
 
   @override
   Path getClip(Size size) {
     var path = Path();
 
     if (type == MessageType.send) {
-      path.addRRect(RRect.fromLTRBR(0, 0, size.width, size.height, Radius.circular(bubbleRadius)));
+      path.addRRect(
+        RRect.fromLTRBR(
+          0,
+          0,
+          size.width,
+          size.height,
+          Radius.circular(bubbleRadius),
+        ),
+      );
       var path2 = Path();
       path2.addRRect(
         RRect.fromLTRBAndCorners(
@@ -23,9 +35,20 @@ class ThreeRoundedEdgesMessageClipper extends CustomClipper<Path> {
           bottomRight: Radius.circular(fourthEdgeRadius),
         ),
       );
-      path.addPath(path2, Offset(size.width - bubbleRadius, size.height - bubbleRadius));
+      path.addPath(
+        path2,
+        Offset(size.width - bubbleRadius, size.height - bubbleRadius),
+      );
     } else {
-      path.addRRect(RRect.fromLTRBR(0, 0, size.width, size.height, Radius.circular(bubbleRadius)));
+      path.addRRect(
+        RRect.fromLTRBR(
+          0,
+          0,
+          size.width,
+          size.height,
+          Radius.circular(bubbleRadius),
+        ),
+      );
       var path2 = Path();
       path2.addRRect(
         RRect.fromLTRBAndCorners(

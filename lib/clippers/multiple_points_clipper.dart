@@ -22,7 +22,11 @@ class MultiplePointsClipper extends CustomClipper<Path> {
   final int numberOfPoints;
   final Sides side;
 
-  MultiplePointsClipper(this.side, {this.heightOfPoint = 12, this.numberOfPoints = 16});
+  MultiplePointsClipper(
+    this.side, {
+    this.heightOfPoint = 12,
+    this.numberOfPoints = 16,
+  });
 
   @override
   Path getClip(Size size) {
