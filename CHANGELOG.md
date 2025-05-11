@@ -1,3 +1,6 @@
+## [2.0.2] - 2025-05-11
+* update readme and changelog
+
 ## [2.0.1] - 2025-05-11
 * update example's gradle version
 * update flutter version to 3.29.3
