@@ -1,3 +1,6 @@
+## [2.0.3] - 2025-05-11
+* fix Pass static analysis
+
 ## [2.0.2] - 2025-05-11
 * update readme and changelog
 

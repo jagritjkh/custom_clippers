@@ -42,7 +42,10 @@ class MultiplePointsClipper extends CustomClipper<Path> {
 
     path.lineTo(0, size.height);
 
-    if (side == Sides.top || side == Sides.left || side == Sides.right || side == Sides.horizontal) {
+    if (side == Sides.top ||
+        side == Sides.left ||
+        side == Sides.right ||
+        side == Sides.horizontal) {
       path.lineTo(size.width, size.height);
     }
 

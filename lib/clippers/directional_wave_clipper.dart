@@ -43,10 +43,18 @@ class DirectionalWaveClipper extends CustomClipper<Path> {
 
       path
         ..lineTo(0.0, size.height)
-        ..quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-            firstEndPoint.dx, firstEndPoint.dy)
-        ..quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
-            secondEndPoint.dx, secondEndPoint.dy)
+        ..quadraticBezierTo(
+          firstControlPoint.dx,
+          firstControlPoint.dy,
+          firstEndPoint.dx,
+          firstEndPoint.dy,
+        )
+        ..quadraticBezierTo(
+          secondControlPoint.dx,
+          secondControlPoint.dy,
+          secondEndPoint.dx,
+          secondEndPoint.dy,
+        )
         ..lineTo(size.width, 0.0)
         ..close();
     } else if (verticalPosition == VerticalPosition.bottom &&
@@ -58,10 +66,18 @@ class DirectionalWaveClipper extends CustomClipper<Path> {
 
       path
         ..lineTo(0.0, size.height - 30)
-        ..quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-            firstEndPoint.dx, firstEndPoint.dy)
-        ..quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
-            secondEndPoint.dx, secondEndPoint.dy)
+        ..quadraticBezierTo(
+          firstControlPoint.dx,
+          firstControlPoint.dy,
+          firstEndPoint.dx,
+          firstEndPoint.dy,
+        )
+        ..quadraticBezierTo(
+          secondControlPoint.dx,
+          secondControlPoint.dy,
+          secondEndPoint.dx,
+          secondEndPoint.dy,
+        )
         ..lineTo(size.width, 0.0)
         ..close();
     } else if (verticalPosition == VerticalPosition.top &&
@@ -73,10 +89,18 @@ class DirectionalWaveClipper extends CustomClipper<Path> {
 
       path
         ..lineTo(0, 30)
-        ..quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-            firstEndPoint.dx, firstEndPoint.dy)
-        ..quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
-            secondEndPoint.dx, secondEndPoint.dy)
+        ..quadraticBezierTo(
+          firstControlPoint.dx,
+          firstControlPoint.dy,
+          firstEndPoint.dx,
+          firstEndPoint.dy,
+        )
+        ..quadraticBezierTo(
+          secondControlPoint.dx,
+          secondControlPoint.dy,
+          secondEndPoint.dx,
+          secondEndPoint.dy,
+        )
         ..lineTo(size.width, size.height)
         ..lineTo(0.0, size.height)
         ..close();
@@ -87,10 +111,18 @@ class DirectionalWaveClipper extends CustomClipper<Path> {
       secondControlPoint = Offset(size.width * .75, 10);
 
       path
-        ..quadraticBezierTo(firstControlPoint.dx, firstControlPoint.dy,
-            firstEndPoint.dx, firstEndPoint.dy)
-        ..quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
-            secondEndPoint.dx, secondEndPoint.dy)
+        ..quadraticBezierTo(
+          firstControlPoint.dx,
+          firstControlPoint.dy,
+          firstEndPoint.dx,
+          firstEndPoint.dy,
+        )
+        ..quadraticBezierTo(
+          secondControlPoint.dx,
+          secondControlPoint.dy,
+          secondEndPoint.dx,
+          secondEndPoint.dy,
+        )
         ..lineTo(size.width, size.height)
         ..lineTo(0.0, size.height)
         ..close();

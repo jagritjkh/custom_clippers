@@ -23,7 +23,11 @@ class MultipleRoundedPointsClipper extends CustomClipper<Path> {
   final int numberOfPoints;
   final Sides side;
 
-  MultipleRoundedPointsClipper(this.side, {this.heightOfPoint = 12, this.numberOfPoints = 16}); // final Sides side;
+  MultipleRoundedPointsClipper(
+    this.side, {
+    this.heightOfPoint = 12,
+    this.numberOfPoints = 16,
+  }); // final Sides side;
 
   @override
   Path getClip(Size size) {
@@ -46,7 +50,10 @@ class MultipleRoundedPointsClipper extends CustomClipper<Path> {
     y = size.height;
     path.lineTo(x, y);
 
-    if (side == Sides.top || side == Sides.left || side == Sides.right || side == Sides.horizontal) {
+    if (side == Sides.top ||
+        side == Sides.left ||
+        side == Sides.right ||
+        side == Sides.horizontal) {
       path.lineTo(size.width, size.height);
     }
 

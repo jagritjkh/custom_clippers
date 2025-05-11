@@ -46,28 +46,33 @@ class UpperNipMessageClipperTwo extends CustomClipper<Path> {
 
     if (type == MessageType.send) {
       path.lineTo(size.width - nipRadius, 0);
-      path.arcToPoint(Offset(size.width - nipRadius, nipRadius),
-          radius: Radius.circular(nipRadius));
+      path.arcToPoint(
+        Offset(size.width - nipRadius, nipRadius),
+        radius: Radius.circular(nipRadius),
+      );
       path.lineTo(size.width - nipWidth, nipHeight);
       path.lineTo(size.width - nipWidth, size.height - bubbleRadius);
-      path.arcToPoint(Offset(size.width - nipWidth - bubbleRadius, size.height),
-          radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(
+        Offset(size.width - nipWidth - bubbleRadius, size.height),
+        radius: Radius.circular(bubbleRadius),
+      );
       path.lineTo(bubbleRadius, size.height);
-      path.arcToPoint(Offset(0, size.height - bubbleRadius),
-          radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(Offset(0, size.height - bubbleRadius), radius: Radius.circular(bubbleRadius));
       path.lineTo(0, bubbleRadius);
-      path.arcToPoint(Offset(bubbleRadius, 0),
-          radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(Offset(bubbleRadius, 0), radius: Radius.circular(bubbleRadius));
     } else {
       path.lineTo(size.width - bubbleRadius, 0);
-      path.arcToPoint(Offset(size.width, bubbleRadius),
-          radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(Offset(size.width, bubbleRadius), radius: Radius.circular(bubbleRadius));
       path.lineTo(size.width, size.height - bubbleRadius);
-      path.arcToPoint(Offset(size.width - bubbleRadius, size.height),
-          radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(
+        Offset(size.width - bubbleRadius, size.height),
+        radius: Radius.circular(bubbleRadius),
+      );
       path.lineTo(bubbleRadius + nipWidth, size.height);
-      path.arcToPoint(Offset(nipWidth, size.height - bubbleRadius),
-          radius: Radius.circular(bubbleRadius));
+      path.arcToPoint(
+        Offset(nipWidth, size.height - bubbleRadius),
+        radius: Radius.circular(bubbleRadius),
+      );
       path.lineTo(nipWidth, nipHeight);
       path.lineTo(nipRadius, nipRadius);
       path.arcToPoint(Offset(nipRadius, 0), radius: Radius.circular(nipRadius));

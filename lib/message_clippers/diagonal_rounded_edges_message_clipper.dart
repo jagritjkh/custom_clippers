@@ -26,13 +26,27 @@ class DiagonalRoundedEdgesMessageClipper extends CustomClipper<Path> {
     var path = Path();
 
     if (type == MessageType.send) {
-      path.addRRect(RRect.fromLTRBAndCorners(0, 0, size.width, size.height,
+      path.addRRect(
+        RRect.fromLTRBAndCorners(
+          0,
+          0,
+          size.width,
+          size.height,
           topLeft: Radius.circular(bubbleRadius),
-          bottomRight: Radius.circular(bubbleRadius)));
+          bottomRight: Radius.circular(bubbleRadius),
+        ),
+      );
     } else {
-      path.addRRect(RRect.fromLTRBAndCorners(0, 0, size.width, size.height,
+      path.addRRect(
+        RRect.fromLTRBAndCorners(
+          0,
+          0,
+          size.width,
+          size.height,
           topRight: Radius.circular(bubbleRadius),
-          bottomLeft: Radius.circular(bubbleRadius)));
+          bottomLeft: Radius.circular(bubbleRadius),
+        ),
+      );
     }
 
     path.close();
